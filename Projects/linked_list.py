@@ -9,7 +9,7 @@ class SinglyLinkedList:
     def append(self, data):
         node = Node(data)
 
-        if self.tail == Node:
+        if self.tail == None:
             self.tail = node
         else:
             current = self.tail
@@ -18,8 +18,7 @@ class SinglyLinkedList:
                 current = current.next
 
             current.next = node
-        
-        self.size += 1
+            self.size += 1
     
     def size (self):
         return str(self.size)
@@ -53,12 +52,8 @@ class SinglyLinkedList:
         for node in self.iter():
             if data == node:
                 print(f'Data {data} found!')
-
-
-    def search_No_Item(self, data):
-        for node in self.iter():
-            if data != node:
-                print(f'Data {data} not found!')
+            else:
+                print(f'Data {data} NOT found!')
 
 
     def clear(self):
