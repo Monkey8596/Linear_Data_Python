@@ -1,8 +1,8 @@
-from array import Array
-from unittest import result
+from Array import Array
+
 
 class Grid():
-    def __init__(self,rows,columns,fill_value=None) -> None:
+    def __init__(self,rows,columns,fill_value=None):
         self.data = Array(rows)
         for row in range(rows):
             self.data[row] = Array(columns, fill_value)
@@ -23,9 +23,9 @@ class Grid():
             for col in range(self.get_width()):
                 result += str(self.data[row][col]) + ''
 
-                result += '\n'
+            result += '\n'
 
-            return str(result)
+        return str(result)
 
 
 
